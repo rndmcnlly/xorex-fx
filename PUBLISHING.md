@@ -1,5 +1,8 @@
 # Public repository and Pages
 
+- Repository: <https://github.com/rndmcnlly/xorex-fx>
+- Prototype workbench: <https://rndmcnlly.github.io/xorex-fx/>
+
 ## Assets and Git LFS
 
 Install Git LFS before cloning, or run `git lfs install` and `git lfs pull` after

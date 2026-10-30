@@ -48,6 +48,12 @@ def main():
                     assert response.status == 200, route
                     evidence['pages'].append({'route': route or './', 'title': page.title()})
                     assert page.locator('body').inner_text().strip(), route
+                    if route == 'gallery.html':
+                        for image in page.locator('img').all():
+                            image.scroll_into_view_if_needed()
+                            image.evaluate('image => image.decode()')
+                            assert image.evaluate('image => image.naturalWidth > 0'), 'Gallery image failed'
+                        evidence['galleryImages'] = page.locator('img').count()
                 # Validate actual Worker imports against a project-path prefix.
                 worker = page.evaluate('''async base => {
                   const {createGame} = await import(base + '03-svg-demake/model.mjs');

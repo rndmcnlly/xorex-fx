@@ -3,6 +3,9 @@
 A preservation-first revival of Adam M. Smith's 2009 Xorex: jewel matching,
 resource management, and shooting played fluently with the arrow keys.
 
+**[Play the browser prototypes](https://rndmcnlly.github.io/xorex-fx/)** ·
+[Public repository](https://github.com/rndmcnlly/xorex-fx)
+
 The ambition is a browser-native contemporary audiovisual treatment inspired
 by Tetris Effect, without sacrificing the original game's precise, immediate
 mechanics. The browser is the shipping platform, not a secondary port.
