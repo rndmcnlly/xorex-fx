@@ -1,0 +1,30 @@
+{
+  "pages": 1,
+  "size_points": [
+    0.0,
+    0.0,
+    612.0,
+    792.0
+  ],
+  "pdf_bytes": 45966,
+  "preview_dpi": 180,
+  "preview_pixels": [
+    1530,
+    1980
+  ],
+  "fonts": [
+    {
+      "name": "AAAAAA+BitstreamVeraSans-Bold",
+      "embedded": true
+    },
+    {
+      "name": "AAAAAA+BitstreamVeraSans-Roman",
+      "embedded": true
+    }
+  ],
+  "text_characters": 2282,
+  "text_within_page": true,
+  "minimum_text_edge_clearance_points": 28,
+  "vector_art_grayscale": true,
+  "preview_colorspace": "grayscale"
+}

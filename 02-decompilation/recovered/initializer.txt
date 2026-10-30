@@ -1,0 +1,144 @@
+0000 getlex Math
+0002 getlex Number
+0004 coerce_a
+0005 getproperty NaN
+0008 convert_i
+0009 initproperty NaN
+000c getlex Math
+000e getlex Number
+0010 coerce_a
+0011 getproperty NEGATIVE_INFINITY
+0014 convert_i
+0015 initproperty NEGATIVE_INFINITY
+0018 getlex Math
+001a getlex Number
+001c coerce_a
+001d getproperty POSITIVE_INFINITY
+0020 convert_i
+0021 initproperty POSITIVE_INFINITY
+0024 getlex Math
+0026 newfunction 316
+0029 initproperty isFinite
+002c getlex Math
+002e newfunction 317
+0031 initproperty isNaN
+0034 getglobalscope
+0035 getlex Boolean
+0037 coerce_a
+0038 setproperty Boolean
+003a getglobalscope
+003b getlex int
+003d setproperty int
+003f getglobalscope
+0040 getlex Number
+0042 setproperty Number
+0044 getglobalscope
+0045 getproperty Log
+0048 setlocal1
+0049 getlocal1
+004a newfunction 318
+004d setslot 1
+004f getlocal1
+0050 newfunction 319
+0053 setslot 2
+0055 getlocal1
+0056 newfunction 320
+0059 setslot 3
+005b getglobalscope
+005c getproperty Boot_e5d4ab
+005f setlocal1
+0060 getlocal1
+0061 pushfalse
+0062 setslot 5
+0064 getglobalscope
+0065 getproperty Tweener
+0068 setlocal1
+0069 getlocal1
+006a pushfalse
+006b setslot 2
+006d getlocal1
+006e pushfalse
+006f setslot 3
+0071 getlocal1
+0072 pushbyte 1
+0074 setslot 7
+0076 getlocal1
+0077 pushtrue
+0078 setslot 12
+007a getlocal1
+007b getlex Reflect
+007e getproperty fields
+0081 setslot 14
+0083 getlocal1
+0084 getlex Reflect
+0087 getproperty field
+008a setslot 15
+008c getlocal1
+008d getlex Reflect
+0090 getproperty setField
+0093 setslot 16
+0095 getglobalscope
+0096 getproperty Main
+0099 setlocal1
+009a getlocal1
+009b pushbyte 20
+009d setslot 1
+009f getlocal1
+00a0 getlex Main
+00a3 getproperty n
+00a6 setslot 2
+00a8 getlocal1
+00a9 pushtrue
+00aa setslot 7
+00ac getlocal1
+00ad pushtrue
+00ae setslot 8
+00b0 getlocal1
+00b1 pushtrue
+00b2 setslot 9
+00b4 getlocal1
+00b5 pushtrue
+00b6 setslot 10
+00b8 getglobalscope
+00b9 getproperty Wavelengths
+00bc setlocal1
+00bd getlocal1
+00be getlex Wavelength
+00c1 getproperty Red
+00c4 pushbyte 15
+00c6 newarray 2
+00c8 getlex Wavelength
+00cb getproperty Green
+00ce pushbyte 15
+00d0 newarray 2
+00d2 getlex Wavelength
+00d5 getproperty Blue
+00d8 pushbyte 15
+00da newarray 2
+00dc getlex Wavelength
+00df getproperty Yellow
+00e2 pushbyte 7
+00e4 newarray 2
+00e6 getlex Wavelength
+00e9 getproperty Pink
+00ec pushbyte 1
+00ee newarray 2
+00f0 getlex Wavelength
+00f3 getproperty White
+00f6 pushbyte 1
+00f8 newarray 2
+00fa getlex Wavelength
+00fd getproperty Black
+0100 pushbyte 30
+0102 newarray 2
+0104 newarray 7
+0106 setslot 1
+0108 getglobalscope
+0109 getproperty @Main
+010c setlocal1
+010d getlocal1
+010e getlex Main
+0111 callproperty main argc=0
+0115 coerce Object
+0117 setslot 1
+0119 returnvoid

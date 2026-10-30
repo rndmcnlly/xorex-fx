@@ -1,0 +1,147 @@
+package §as§.adamsmith.xorex
+{
+   import flash.display.MovieClip;
+   import flash.events.MouseEvent;
+   import flash.media.Sound;
+   import flash.media.SoundChannel;
+   import flash.text.TextField;
+   
+   public class MusakToggle extends MovieClip
+   {
+      
+      method
+         name null
+         returns QName(PackageNamespace(""),"void")
+         
+         body
+            maxstack 0
+            localcount 1
+            initscopedepth 1
+            maxscopedepth 1
+            
+            code
+               returnvoid
+            end ; code
+         end ; body
+      end ; method
+      
+      public var sound:Sound;
+      
+      public var sc:SoundChannel;
+      
+      public function MusakToggle(param1:Sound = undefined)
+      {
+         method
+            name null
+            flag HAS_OPTIONAL
+            param QName(PackageNamespace("flash.media"),"Sound")
+            optional Undefined()
+            returns QName(PackageNamespace(""),"void")
+            
+            body
+               maxstack 4
+               localcount 3
+               initscopedepth 1
+               maxscopedepth 2
+               
+               code
+                  getlocal0
+                  pushscope
+                  getlex QName(PackageNamespace(""),"Boot_e5d4ab")
+                  getproperty QName(PackageNamespace(""),"skip_constructor")
+                  iffalse ofs000d
+                  returnvoid
+         ofs000d:
+                  getlocal0
+                  constructsuper 0
+                  findproperty QName(PackageNamespace(""),"sound")
+                  getlocal1
+                  initproperty QName(PackageNamespace(""),"sound")
+                  findproperty QName(PackageNamespace(""),"addEventListener")
+                  getlex QName(PackageNamespace("flash.events"),"MouseEvent")
+                  getproperty QName(PackageNamespace(""),"CLICK")
+                  findproperty QName(PackageNamespace(""),"onClick")
+                  getproperty QName(PackageNamespace(""),"onClick")
+                  callpropvoid QName(PackageNamespace(""),"addEventListener"), 2
+                  findproperty QName(PackageNamespace(""),"sc")
+                  findproperty QName(PackageNamespace(""),"sound")
+                  getproperty QName(PackageNamespace(""),"sound")
+                  pushbyte 0
+                  pushint 16777215
+                  callproperty QName(PackageNamespace(""),"play"), 2
+                  coerce QName(PackageNamespace("flash.media"),"SoundChannel")
+                  initproperty QName(PackageNamespace(""),"sc")
+                  findpropstrict QName(PackageNamespace("flash.text"),"TextField")
+                  constructprop QName(PackageNamespace("flash.text"),"TextField"), 0
+                  coerce QName(PackageNamespace("flash.text"),"TextField")
+                  setlocal2
+                  getlocal2
+                  pushstring "mute"
+                  initproperty QName(PackageNamespace(""),"text")
+                  findproperty QName(PackageNamespace(""),"addChild")
+                  getlocal2
+                  callpropvoid QName(PackageNamespace(""),"addChild"), 1
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function onClick(param1:MouseEvent) : void
+      {
+         trait method QName(PackageNamespace(""),"onClick")
+            dispid 0
+            method
+               name null
+               param QName(PackageNamespace("flash.events"),"MouseEvent")
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 4
+                  localcount 2
+                  initscopedepth 1
+                  maxscopedepth 2
+                  
+                  code
+                     getlocal0
+                     pushscope
+                     findproperty QName(PackageNamespace(""),"sc")
+                     getproperty QName(PackageNamespace(""),"sc")
+                     pushnull
+                     coerce QName(PackageNamespace("flash.media"),"SoundChannel")
+                     ifne ofs003b
+                     findproperty QName(PackageNamespace(""),"sc")
+                     findproperty QName(PackageNamespace(""),"sound")
+                     getproperty QName(PackageNamespace(""),"sound")
+                     pushbyte 0
+                     pushint 16777215
+                     callproperty QName(PackageNamespace(""),"play"), 2
+                     coerce QName(PackageNamespace("flash.media"),"SoundChannel")
+                     initproperty QName(PackageNamespace(""),"sc")
+                     getlex QName(PackageNamespace("as.adamsmith.xorex"),"Main")
+                     pushtrue
+                     initproperty QName(PackageNamespace(""),"triggerSounds")
+                     getlex QName(PackageNamespace("as.adamsmith.xorex"),"Main")
+                     pushstring "logo"
+                     callpropvoid QName(PackageNamespace(""),"triggerEvent"), 1
+                     jump ofs0056
+            ofs003b:
+                     findproperty QName(PackageNamespace(""),"sc")
+                     getproperty QName(PackageNamespace(""),"sc")
+                     callpropvoid QName(PackageNamespace(""),"stop"), 0
+                     findproperty QName(PackageNamespace(""),"sc")
+                     pushnull
+                     coerce QName(PackageNamespace("flash.media"),"SoundChannel")
+                     initproperty QName(PackageNamespace(""),"sc")
+                     getlex QName(PackageNamespace("as.adamsmith.xorex"),"Main")
+                     pushfalse
+                     initproperty QName(PackageNamespace(""),"triggerSounds")
+            ofs0056:
+                     returnvoid
+                  end ; code
+               end ; body
+            end ; method
+         }
+      }
+   }
+   

@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import {gems, palette, initialState, reduce} from './fixture.mjs';
+assert.equal(gems.length, 30);
+assert.equal(new Set(gems.map(g => g.color)).size, palette.length);
+let state = initialState();
+const original = {...state};
+for (let i = 0; i < 1000; i++) state = reduce(state, 'right');
+assert.equal(state.lane, 4);
+assert.equal(state.actions, 1000);
+assert.deepEqual(initialState(), original);
+for (let i = 0; i < 1000; i++) state = reduce(state, 'left');
+assert.equal(state.lane, 0);
+for (let i = 0; i < 6; i++) state = reduce(state, 'color');
+assert.equal(state.color, 0);
+assert.equal(reduce(state, 'unknown'), state);
+assert.equal(reduce(state, 'pulse').actions, 2007);
+console.log('PASS fixture: palette coverage, clamping, rapid actions, purity, cycle, pulse');

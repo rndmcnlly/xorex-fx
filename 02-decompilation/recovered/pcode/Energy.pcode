@@ -1,0 +1,126 @@
+package §as§.adamsmith.xorex
+{
+   public class Energy
+   {
+      
+      method
+         name null
+         returns QName(PackageNamespace(""),"void")
+         
+         body
+            maxstack 0
+            localcount 1
+            initscopedepth 1
+            maxscopedepth 1
+            
+            code
+               returnvoid
+            end ; code
+         end ; body
+      end ; method
+      
+      public var n:int;
+      
+      public var lambda:Wavelength;
+      
+      public function Energy()
+      {
+         method
+            name null
+            returns QName(PackageNamespace(""),"void")
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 1
+               maxscopedepth 2
+               
+               code
+                  getlocal0
+                  pushscope
+                  getlex QName(PackageNamespace(""),"Boot_e5d4ab")
+                  getproperty QName(PackageNamespace(""),"skip_constructor")
+                  iffalse ofs000d
+                  returnvoid
+         ofs000d:
+                  findproperty QName(PackageNamespace(""),"reset")
+                  callpropvoid QName(PackageNamespace(""),"reset"), 0
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function reset() : void
+      {
+         trait method QName(PackageNamespace(""),"reset")
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 2
+                  localcount 1
+                  initscopedepth 1
+                  maxscopedepth 2
+                  
+                  code
+                     getlocal0
+                     pushscope
+                     findproperty QName(PackageNamespace(""),"n")
+                     pushbyte 0
+                     initproperty QName(PackageNamespace(""),"n")
+                     findproperty QName(PackageNamespace(""),"lambda")
+                     pushnull
+                     coerce QName(PackageNamespace("as.adamsmith.xorex"),"Wavelength")
+                     initproperty QName(PackageNamespace(""),"lambda")
+                     returnvoid
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function decrement() : void
+         {
+            trait method QName(PackageNamespace(""),"decrement")
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 2
+                     localcount 1
+                     initscopedepth 1
+                     maxscopedepth 2
+                     
+                     code
+                        getlocal0
+                        pushscope
+                        findproperty QName(PackageNamespace(""),"n")
+                        getproperty QName(PackageNamespace(""),"n")
+                        pushbyte 1
+                        ifne ofs0019
+                        findproperty QName(PackageNamespace(""),"reset")
+                        callpropvoid QName(PackageNamespace(""),"reset"), 0
+                        jump ofs0032
+               ofs0019:
+                        findproperty QName(PackageNamespace(""),"n")
+                        getproperty QName(PackageNamespace(""),"n")
+                        pushbyte 0
+                        ifngt ofs0032
+                        findproperty QName(PackageNamespace(""),"n")
+                        findproperty QName(PackageNamespace(""),"n")
+                        getproperty QName(PackageNamespace(""),"n")
+                        decrement_i
+                        initproperty QName(PackageNamespace(""),"n")
+               ofs0032:
+                        returnvoid
+                     end ; code
+                  end ; body
+               end ; method
+            }
+         }
+      }
+      

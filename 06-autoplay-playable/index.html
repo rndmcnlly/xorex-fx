@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Xorex · live autoplay playable</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#292929;color:#eee;font:14px system-ui,sans-serif}main{max-width:840px;margin:20px auto;padding:0 16px}h1{font-size:20px;font-weight:500;margin:0}p{line-height:1.5;color:#ccc}.controls{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:12px 0}button,select{font:inherit;background:#444;color:white;border:1px solid #777;border-radius:4px;padding:6px 10px}a{color:#ccc}#stage{position:relative;aspect-ratio:4/3;background:#404040;outline-offset:3px}canvas{display:block;width:100%;height:100%}#overlay{position:absolute;inset:0;display:grid;place-content:center;text-align:center;background:#404040e8;padding:20px}#overlay[hidden]{display:none}#overlay h2{font-size:30px;font-weight:400}#overlay button{justify-self:center}#status,#auto-status{font-variant-numeric:tabular-nums;color:#fff}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px;color:#bbb}small{color:#bbb}label{white-space:nowrap}input[type=range]{width:85px;vertical-align:middle}#auto-status{margin:8px 0}details{margin:16px 0}
+</style>
+<main><h1>Xorex / live autoplay</h1>
+<p>Left/right: lane · Down: collect / convert · Up: replace / fire.<br>Tab in the game toggles AUTO-PLAY. Any manual arrow takes over immediately. Shift+Tab returns to controls.</p>
+<div class="controls"><label><input id="auto" type="checkbox"> AUTO-PLAY (Tab)</label><label>Pace <input id="rate" type="range" min="8" max="30" value="12" step="1"> <output id="rate-value">12</output> arrows/s</label><button id="restart">Restart</button></div>
+<p id="auto-status" role="status">Manual · HTN snapshots every 1 second</p>
+<div class="controls"><label>Color <select id="gamut"><option value="display-p3">Display P3 if supported</option><option value="srgb">sRGB</option></select></label><label><input type="checkbox" id="effects" checked> Motion</label><label><input type="checkbox" id="reduced"> Reduced motion</label><label><input type="checkbox" id="plain"> Steady reference</label><label>Emission <input type="range" id="intensity" min="0" max="1.8" step="0.1" value="1.2"></label></div>
+<div id="stage" tabindex="0" aria-label="Xorex keyboard game, arrows play, Tab toggles autoplay"><canvas id="board" width="800" height="600" aria-label="20-lane game board"></canvas><div id="overlay"><h2 id="heading">Xorex</h2><p id="message">Up, Down, Start or enabling AUTO-PLAY starts without a phantom move.<br>Release before pressing the same key again. Audio off.</p><button id="start">Start</button></div></div>
+<p id="status" role="status">Ready.</p><p id="capability"></p>
+<small>Live 30 Hz arrivals never wait for planning. HTN imagines a frozen board, not future spawns. Every executed arrow checks local preconditions. P3 is SDR, not HDR.</small>
+<details><summary>Developer controls and capability evidence</summary><div class="controls"><button id="pause" disabled>Pause (developer)</button><button id="step" disabled>One frame (developer)</button></div><pre id="debug"></pre><pre id="caps"></pre><p id="seed-note"></p></details>
+<p><a href="../04-rendering-lab/motion-playable/">Manual motion prototype</a> · <a href="../03-svg-demake/">Accepted SVG reference</a> · <a href="README.md">Architecture and controls</a></p>
+</main><script type="module" src="app.mjs"></script></html>

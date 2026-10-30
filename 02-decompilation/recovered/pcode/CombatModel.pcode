@@ -1,0 +1,569 @@
+package §as§.adamsmith.xorex
+{
+   import flash.display.DisplayObject;
+   import flash.display.MovieClip;
+   import haxe.Timer;
+   
+   public class CombatModel extends MovieClip
+   {
+      
+      method
+         name null
+         returns QName(PackageNamespace(""),"void")
+         
+         body
+            maxstack 0
+            localcount 1
+            initscopedepth 1
+            maxscopedepth 1
+            
+            code
+               returnvoid
+            end ; code
+         end ; body
+      end ; method
+      
+      public var contents:Array;
+      
+      public function CombatModel()
+      {
+         method
+            name null
+            returns QName(PackageNamespace(""),"void")
+            
+            body
+               maxstack 2
+               localcount 1
+               initscopedepth 1
+               maxscopedepth 2
+               
+               code
+                  getlocal0
+                  pushscope
+                  getlex QName(PackageNamespace(""),"Boot_e5d4ab")
+                  getproperty QName(PackageNamespace(""),"skip_constructor")
+                  iffalse ofs000d
+                  returnvoid
+         ofs000d:
+                  getlocal0
+                  constructsuper 0
+                  findproperty QName(PackageNamespace(""),"contents")
+                  newarray 0
+                  initproperty QName(PackageNamespace(""),"contents")
+                  findproperty QName(PackageNamespace(""),"clear")
+                  callpropvoid QName(PackageNamespace(""),"clear"), 0
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function synthesize(param1:int, param2:Energy) : void
+      {
+         trait method QName(PackageNamespace(""),"synthesize")
+            dispid 0
+            method
+               name null
+               param QName(PackageNamespace(""),"int")
+               param QName(PackageNamespace("as.adamsmith.xorex"),"Energy")
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 3
+                  localcount 7
+                  initscopedepth 1
+                  maxscopedepth 2
+                  
+                  code
+                     getlocal0
+                     pushscope
+                     pushbyte 0
+                     setlocal 4
+                     pushbyte 0
+                     setlocal 5
+                     pushbyte 0
+                     setlocal 6
+                     findproperty QName(PackageNamespace(""),"contents")
+                     getproperty QName(PackageNamespace(""),"contents")
+                     getlocal1
+                     getproperty MultinameL([PackageNamespace("","1")])
+                     coerce QName(PackageNamespace(""),"List")
+                     coerce QName(PackageNamespace(""),"List")
+                     setlocal3
+                     getlocal2
+                     getproperty QName(PackageNamespace(""),"lambda")
+                     pushnull
+                     coerce QName(PackageNamespace("as.adamsmith.xorex"),"Wavelength")
+                     ifeq ofs005b
+                     pushbyte 0
+                     convert_i
+                     setlocal 4
+                     getlocal2
+                     getproperty QName(PackageNamespace(""),"n")
+                     convert_i
+                     setlocal 5
+                     jump ofs0053
+            ofs003b:
+                     label
+                     getlocal 4
+                     inclocal_i 4
+                     convert_i
+                     setlocal 6
+                     getlocal3
+                     findpropstrict QName(PackageNamespace("as.adamsmith.xorex"),"Enemy")
+                     getlocal2
+                     getproperty QName(PackageNamespace(""),"lambda")
+                     constructprop QName(PackageNamespace("as.adamsmith.xorex"),"Enemy"), 1
+                     callpropvoid QName(PackageNamespace(""),"add"), 1
+            ofs0053:
+                     getlocal 4
+                     getlocal 5
+                     iflt ofs003b
+            ofs005b:
+                     findproperty QName(PackageNamespace(""),"redraw")
+                     callpropvoid QName(PackageNamespace(""),"redraw"), 0
+                     returnvoid
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function sprinkleOne() : void
+         {
+            trait method QName(PackageNamespace(""),"sprinkleOne")
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 3
+                     localcount 1
+                     initscopedepth 1
+                     maxscopedepth 2
+                     
+                     code
+                        getlocal0
+                        pushscope
+                        findproperty QName(PackageNamespace(""),"contents")
+                        getproperty QName(PackageNamespace(""),"contents")
+                        getlex QName(PackageNamespace("as.adamsmith.xorex"),"Main")
+                        callproperty QName(PackageNamespace(""),"chooseOne"), 0
+                        convert_i
+                        getproperty MultinameL([PackageNamespace("","1")])
+                        coerce QName(PackageNamespace(""),"List")
+                        findpropstrict QName(PackageNamespace("as.adamsmith.xorex"),"Enemy")
+                        getlex QName(PackageNamespace("as.adamsmith.xorex"),"Wavelengths")
+                        callproperty QName(PackageNamespace(""),"choose"), 0
+                        coerce QName(PackageNamespace("as.adamsmith.xorex"),"Wavelength")
+                        constructprop QName(PackageNamespace("as.adamsmith.xorex"),"Enemy"), 1
+                        callpropvoid QName(PackageNamespace(""),"push"), 1
+                        findproperty QName(PackageNamespace(""),"redraw")
+                        callpropvoid QName(PackageNamespace(""),"redraw"), 0
+                        returnvoid
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function shouldTerminate() : Boolean
+            {
+               trait method QName(PackageNamespace(""),"shouldTerminate")
+                  dispid 0
+                  method
+                     name null
+                     returns QName(PackageNamespace(""),"Boolean")
+                     
+                     body
+                        maxstack 2
+                        localcount 4
+                        initscopedepth 1
+                        maxscopedepth 2
+                        
+                        code
+                           getlocal0
+                           pushscope
+                           pushnull
+                           astype QName(PackageNamespace(""),"List")
+                           setlocal3
+                           pushbyte 0
+                           convert_i
+                           setlocal1
+                           findproperty QName(PackageNamespace(""),"contents")
+                           getproperty QName(PackageNamespace(""),"contents")
+                           coerce QName(PackageNamespace(""),"Array")
+                           setlocal2
+                           jump ofs0033
+                  ofs0019:
+                           label
+                           getlocal2
+                           getlocal1
+                           getproperty MultinameL([PackageNamespace("","1")])
+                           coerce QName(PackageNamespace(""),"List")
+                           coerce QName(PackageNamespace(""),"List")
+                           setlocal3
+                           inclocal_i 1
+                           getlocal3
+                           getproperty QName(PackageNamespace(""),"length")
+                           pushbyte 14
+                           ifngt ofs0033
+                           pushtrue
+                           returnvalue
+                  ofs0033:
+                           getlocal1
+                           getlocal2
+                           getproperty QName(PackageNamespace(""),"length")
+                           convert_i
+                           iflt ofs0019
+                           pushfalse
+                           returnvalue
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function redraw() : void
+               {
+                  trait method QName(PackageNamespace(""),"redraw")
+                     dispid 0
+                     method
+                        name null
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 3
+                           localcount 9
+                           initscopedepth 1
+                           maxscopedepth 2
+                           
+                           code
+                              getlocal0
+                              pushscope
+                              pushbyte 0
+                              setlocal 4
+                              pushbyte 0
+                              setlocal 5
+                              pushnull
+                              coerce_a
+                              setlocal 6
+                              pushnull
+                              astype QName(PackageNamespace("as.adamsmith.xorex"),"Enemy")
+                              setlocal 7
+                              pushnull
+                              astype QName(PackageNamespace("flash.display"),"MovieClip")
+                              setlocal 8
+                              getlex QName(PackageNamespace("haxe"),"Timer")
+                              callproperty QName(PackageNamespace(""),"stamp"), 0
+                              convert_d
+                              convert_d
+                              setlocal1
+                              pushbyte 0
+                              convert_i
+                              setlocal2
+                              findproperty QName(PackageNamespace(""),"numChildren")
+                              getproperty QName(PackageNamespace(""),"numChildren")
+                              convert_i
+                              setlocal3
+                              jump ofs004d
+                     ofs0033:
+                              label
+                              getlocal2
+                              inclocal_i 2
+                              convert_i
+                              setlocal 4
+                              findproperty QName(PackageNamespace(""),"removeChild")
+                              findproperty QName(PackageNamespace(""),"getChildAt")
+                              pushbyte 0
+                              callproperty QName(PackageNamespace(""),"getChildAt"), 1
+                              coerce QName(PackageNamespace("flash.display"),"DisplayObject")
+                              callpropvoid QName(PackageNamespace(""),"removeChild"), 1
+                     ofs004d:
+                              getlocal2
+                              getlocal3
+                              iflt ofs0033
+                              pushbyte 0
+                              convert_i
+                              setlocal2
+                              getlex QName(PackageNamespace("as.adamsmith.xorex"),"Main")
+                              getproperty QName(PackageNamespace(""),"n")
+                              convert_i
+                              setlocal3
+                              jump ofs00dc
+                     ofs0063:
+                              label
+                              getlocal2
+                              inclocal_i 2
+                              convert_i
+                              setlocal 4
+                              pushbyte 0
+                              convert_i
+                              setlocal 5
+                              findproperty QName(PackageNamespace(""),"contents")
+                              getproperty QName(PackageNamespace(""),"contents")
+                              getlocal 4
+                              getproperty MultinameL([PackageNamespace("","1")])
+                              coerce QName(PackageNamespace(""),"List")
+                              callproperty QName(PackageNamespace(""),"iterator"), 0
+                              coerce_a
+                              coerce_a
+                              setlocal 6
+                     ofs0085:
+                              label
+                              getlocal 6
+                              callproperty QName(PackageNamespace(""),"hasNext"), 0
+                              iffalse ofs00dc
+                              getlocal 6
+                              callproperty QName(PackageNamespace(""),"next"), 0
+                              coerce QName(PackageNamespace("as.adamsmith.xorex"),"Enemy")
+                              setlocal 7
+                              getlocal 7
+                              getproperty QName(PackageNamespace(""),"clip")
+                              coerce QName(PackageNamespace("flash.display"),"MovieClip")
+                              setlocal 8
+                              getlocal 7
+                              getproperty QName(PackageNamespace(""),"clip")
+                              pushbyte 40
+                              getlocal 4
+                              multiply_i
+                              pushbyte 20
+                              add_i
+                              pushbyte 0
+                              add_i
+                              initproperty QName(PackageNamespace(""),"x")
+                              getlocal 7
+                              getproperty QName(PackageNamespace(""),"clip")
+                              getlocal 5
+                              pushbyte 0
+                              add_i
+                              initproperty QName(PackageNamespace(""),"y")
+                              getlocal 5
+                              pushbyte 40
+                              add_i
+                              convert_i
+                              setlocal 5
+                              findproperty QName(PackageNamespace(""),"addChild")
+                              getlocal 7
+                              getproperty QName(PackageNamespace(""),"clip")
+                              callpropvoid QName(PackageNamespace(""),"addChild"), 1
+                              jump ofs0085
+                     ofs00dc:
+                              getlocal2
+                              getlocal3
+                              iflt ofs0063
+                              returnvoid
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function gather(param1:int) : Energy
+                  {
+                     trait method QName(PackageNamespace(""),"gather")
+                        dispid 0
+                        method
+                           name null
+                           param QName(PackageNamespace(""),"int")
+                           returns QName(PackageNamespace("as.adamsmith.xorex"),"Energy")
+                           
+                           body
+                              maxstack 2
+                              localcount 4
+                              initscopedepth 1
+                              maxscopedepth 2
+                              
+                              code
+                                 getlocal0
+                                 pushscope
+                                 findproperty QName(PackageNamespace(""),"contents")
+                                 getproperty QName(PackageNamespace(""),"contents")
+                                 getlocal1
+                                 getproperty MultinameL([PackageNamespace("","1")])
+                                 coerce QName(PackageNamespace(""),"List")
+                                 coerce QName(PackageNamespace(""),"List")
+                                 setlocal2
+                                 findpropstrict QName(PackageNamespace("as.adamsmith.xorex"),"Energy")
+                                 constructprop QName(PackageNamespace("as.adamsmith.xorex"),"Energy"), 0
+                                 coerce QName(PackageNamespace("as.adamsmith.xorex"),"Energy")
+                                 setlocal3
+                                 jump ofs0088
+                        ofs0022:
+                                 label
+                                 getlocal2
+                                 callproperty QName(PackageNamespace(""),"last"), 0
+                                 coerce QName(PackageNamespace("as.adamsmith.xorex"),"Enemy")
+                                 getproperty QName(PackageNamespace(""),"lambda")
+                                 getlex QName(PackageNamespace("as.adamsmith.xorex"),"Wavelength")
+                                 getproperty QName(PackageNamespace(""),"Black")
+                                 ifne ofs003c
+                                 jump ofs0091
+                        ofs003c:
+                                 getlocal3
+                                 getproperty QName(PackageNamespace(""),"lambda")
+                                 pushnull
+                                 coerce QName(PackageNamespace("as.adamsmith.xorex"),"Wavelength")
+                                 ifne ofs0057
+                                 getlocal3
+                                 getlocal2
+                                 callproperty QName(PackageNamespace(""),"last"), 0
+                                 coerce QName(PackageNamespace("as.adamsmith.xorex"),"Enemy")
+                                 getproperty QName(PackageNamespace(""),"lambda")
+                                 initproperty QName(PackageNamespace(""),"lambda")
+                        ofs0057:
+                                 getlocal3
+                                 getproperty QName(PackageNamespace(""),"lambda")
+                                 getlocal2
+                                 callproperty QName(PackageNamespace(""),"last"), 0
+                                 coerce QName(PackageNamespace("as.adamsmith.xorex"),"Enemy")
+                                 getproperty QName(PackageNamespace(""),"lambda")
+                                 ifne ofs0084
+                                 getlocal2
+                                 getlocal2
+                                 callproperty QName(PackageNamespace(""),"last"), 0
+                                 coerce QName(PackageNamespace("as.adamsmith.xorex"),"Enemy")
+                                 callpropvoid QName(PackageNamespace(""),"remove"), 1
+                                 getlocal3
+                                 getlocal3
+                                 getproperty QName(PackageNamespace(""),"n")
+                                 increment_i
+                                 initproperty QName(PackageNamespace(""),"n")
+                                 jump ofs0088
+                        ofs0084:
+                                 jump ofs0091
+                        ofs0088:
+                                 getlocal2
+                                 getproperty QName(PackageNamespace(""),"length")
+                                 pushbyte 0
+                                 ifgt ofs0022
+                        ofs0091:
+                                 findproperty QName(PackageNamespace(""),"redraw")
+                                 callpropvoid QName(PackageNamespace(""),"redraw"), 0
+                                 getlocal3
+                                 returnvalue
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public function fire(param1:int, param2:Energy) : void
+                     {
+                        trait method QName(PackageNamespace(""),"fire")
+                           dispid 0
+                           method
+                              name null
+                              param QName(PackageNamespace(""),"int")
+                              param QName(PackageNamespace("as.adamsmith.xorex"),"Energy")
+                              returns QName(PackageNamespace(""),"void")
+                              
+                              body
+                                 maxstack 3
+                                 localcount 6
+                                 initscopedepth 1
+                                 maxscopedepth 2
+                                 
+                                 code
+                                    getlocal0
+                                    pushscope
+                                    pushbyte 0
+                                    setlocal 5
+                                    pushbyte 0
+                                    convert_i
+                                    setlocal3
+                                    getlocal2
+                                    getproperty QName(PackageNamespace(""),"n")
+                                    convert_i
+                                    setlocal 4
+                                    jump ofs005a
+                           ofs0015:
+                                    label
+                                    getlocal3
+                                    inclocal_i 3
+                                    convert_i
+                                    setlocal 5
+                                    findproperty QName(PackageNamespace(""),"contents")
+                                    getproperty QName(PackageNamespace(""),"contents")
+                                    getlocal1
+                                    getproperty MultinameL([PackageNamespace("","1")])
+                                    coerce QName(PackageNamespace(""),"List")
+                                    getproperty QName(PackageNamespace(""),"length")
+                                    pushbyte 0
+                                    ifngt ofs005a
+                                    findproperty QName(PackageNamespace(""),"contents")
+                                    getproperty QName(PackageNamespace(""),"contents")
+                                    getlocal1
+                                    getproperty MultinameL([PackageNamespace("","1")])
+                                    coerce QName(PackageNamespace(""),"List")
+                                    findproperty QName(PackageNamespace(""),"contents")
+                                    getproperty QName(PackageNamespace(""),"contents")
+                                    getlocal1
+                                    getproperty MultinameL([PackageNamespace("","1")])
+                                    coerce QName(PackageNamespace(""),"List")
+                                    callproperty QName(PackageNamespace(""),"last"), 0
+                                    coerce QName(PackageNamespace("as.adamsmith.xorex"),"Enemy")
+                                    callpropvoid QName(PackageNamespace(""),"remove"), 1
+                                    jump ofs0061
+                           ofs005a:
+                                    getlocal3
+                                    getlocal 4
+                                    iflt ofs0015
+                           ofs0061:
+                                    findproperty QName(PackageNamespace(""),"redraw")
+                                    callpropvoid QName(PackageNamespace(""),"redraw"), 0
+                                    returnvoid
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        public function clear() : void
+                        {
+                           trait method QName(PackageNamespace(""),"clear")
+                              dispid 0
+                              method
+                                 name null
+                                 returns QName(PackageNamespace(""),"void")
+                                 
+                                 body
+                                    maxstack 3
+                                    localcount 4
+                                    initscopedepth 1
+                                    maxscopedepth 2
+                                    
+                                    code
+                                       getlocal0
+                                       pushscope
+                                       pushbyte 0
+                                       setlocal3
+                                       pushbyte 0
+                                       convert_i
+                                       setlocal1
+                                       getlex QName(PackageNamespace("as.adamsmith.xorex"),"Main")
+                                       getproperty QName(PackageNamespace(""),"n")
+                                       convert_i
+                                       setlocal2
+                                       jump ofs002c
+                              ofs0015:
+                                       label
+                                       getlocal1
+                                       inclocal_i 1
+                                       convert_i
+                                       setlocal3
+                                       findproperty QName(PackageNamespace(""),"contents")
+                                       getproperty QName(PackageNamespace(""),"contents")
+                                       getlocal3
+                                       findpropstrict QName(PackageNamespace(""),"List")
+                                       constructprop QName(PackageNamespace(""),"List"), 0
+                                       setproperty MultinameL([PackageNamespace("","1")])
+                              ofs002c:
+                                       getlocal1
+                                       getlocal2
+                                       iflt ofs0015
+                                       findproperty QName(PackageNamespace(""),"redraw")
+                                       callpropvoid QName(PackageNamespace(""),"redraw"), 0
+                                       returnvoid
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                        }
+                     }
+                     

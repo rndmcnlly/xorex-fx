@@ -1,0 +1,124 @@
+package §as§.adamsmith.xorex
+{
+   public class Random
+   {
+      
+      method
+         name null
+         returns QName(PackageNamespace(""),"void")
+         
+         body
+            maxstack 0
+            localcount 1
+            initscopedepth 1
+            maxscopedepth 1
+            
+            code
+               returnvoid
+            end ; code
+         end ; body
+      end ; method
+      
+      public function Random()
+      {
+         method
+            name null
+            returns QName(PackageNamespace(""),"void")
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 1
+               maxscopedepth 2
+               
+               code
+                  getlocal0
+                  pushscope
+                  getlex QName(PackageNamespace(""),"Boot_e5d4ab")
+                  getproperty QName(PackageNamespace(""),"skip_constructor")
+                  iffalse ofs000d
+                  returnvoid
+         ofs000d:
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public static function randInt(param1:int, param2:int) : int
+      {
+         trait method QName(PackageNamespace(""),"randInt")
+            flag FINAL
+            dispid 1
+            method
+               name null
+               param QName(PackageNamespace(""),"int")
+               param QName(PackageNamespace(""),"int")
+               returns QName(PackageNamespace(""),"int")
+               
+               body
+                  maxstack 5
+                  localcount 3
+                  initscopedepth 1
+                  maxscopedepth 1
+                  
+                  code
+                     getlocal1
+                     getlex QName(PackageNamespace(""),"Math")
+                     getlex QName(PackageNamespace(""),"Math")
+                     callproperty QName(PackageNamespace(""),"random"), 0
+                     convert_d
+                     getlocal2
+                     getlocal1
+                     subtract_i
+                     multiply
+                     callproperty QName(PackageNamespace(""),"floor"), 1
+                     convert_i
+                     add_i
+                     returnvalue
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public static function choose(param1:Object) : Object
+         {
+            trait method QName(PackageNamespace(""),"choose")
+               flag FINAL
+               dispid 2
+               method
+                  name null
+                  param QName(PackageNamespace(""),"Object")
+                  returns QName(PackageNamespace(""),"Object")
+                  
+                  body
+                     maxstack 4
+                     localcount 3
+                     initscopedepth 1
+                     maxscopedepth 1
+                     
+                     code
+                        getlex QName(PackageNamespace(""),"Lambda")
+                        getlocal1
+                        callproperty QName(PackageNamespace(""),"array"), 1
+                        coerce QName(PackageNamespace(""),"Array")
+                        coerce QName(PackageNamespace(""),"Array")
+                        setlocal2
+                        getlocal2
+                        getlex QName(PackageNamespace("as.adamsmith.xorex"),"Random")
+                        pushbyte 0
+                        getlocal2
+                        getproperty QName(PackageNamespace(""),"length")
+                        convert_i
+                        callproperty QName(PackageNamespace(""),"randInt"), 2
+                        convert_i
+                        getproperty MultinameL([PackageNamespace("","1")])
+                        coerce QName(PackageNamespace(""),"Object")
+                        returnvalue
+                     end ; code
+                  end ; body
+               end ; method
+            }
+         }
+      }
+      

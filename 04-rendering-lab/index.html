@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Xorex FX · Rendering lab</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#14191d;color:#e1e8e9;font:15px/1.5 system-ui,sans-serif}main{max-width:1120px;margin:auto;padding:28px 22px}header{display:flex;align-items:center;justify-content:space-between;gap:20px}h1{font-weight:500;letter-spacing:.04em;margin:.3em 0}h2{font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:.13em;color:#a9bdc5}p{color:#a9bdc5}.tag{color:#9de5dd;font:12px monospace;letter-spacing:.09em}.views{display:grid;grid-template-columns:1fr 1fr;gap:22px}.stage{position:relative;aspect-ratio:5/7;background:#404040;border-radius:8px;overflow:hidden}canvas{width:100%;height:100%;display:block}canvas:focus-visible{outline:2px solid #a3eee5;outline-offset:-3px}.controls{display:flex;flex-wrap:wrap;gap:16px;margin:20px 0;align-items:center}label{display:flex;gap:7px;align-items:center}button,select{font:inherit;background:#273238;color:#e1e8e9;border:1px solid #4c626c;border-radius:5px;padding:7px 12px}button{cursor:pointer}button:hover{background:#37484f}#state{font:13px monospace;color:#bfe9df}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.6 monospace;color:#afc1ca;background:#1e282e;padding:16px;border-radius:6px}summary{cursor:pointer}a{color:#a3ddd4}.note{font-size:13px}.swatch{display:inline-block;width:1em;height:1em;background:#404040;border:1px solid #7b8589;vertical-align:middle}@media(max-width:600px){main{padding:18px 12px}.views{gap:10px}header{display:block}h1{font-size:23px}.note{font-size:12px}.controls{gap:10px;font-size:13px}}
+</style>
+<main>
+<header><div><div class="tag">XOREX FX / STUDY 04</div><h1>Light, without latency.</h1></div><div class="tag">RENDERING ONLY · NOT MECHANICS-TRUE</div></header>
+<p>Orthographic lanes, jewel materials, a readable dark orb. Generated shapes, not recovered art.</p>
+<div class="controls">
+<label>Presentation <select id="mode"><option value="lit">Lit materials</option><option value="flat">Flat baseline</option></select></label>
+<label><input id="glow" type="checkbox" checked> Soft halos</label>
+<label><input id="motion" type="checkbox"> Lingering pulse</label>
+<label><input id="background" type="checkbox" checked> <span class="swatch"></span> #404040</label>
+</div>
+<div class="views"><section><h2>01 / shallow 3D · WebGL2</h2><div id="stage" class="stage"><canvas id="view" tabindex="0" aria-label="Rendering study. Left and right select a lane; up pulses; down cycles ship color."></canvas></div></section><section><h2>02 / plain state reference</h2><div class="stage"><canvas id="reference" aria-label="Flat reference of the same rendering fixture"></canvas></div></section></div>
+<div class="controls"><button data-action="left" aria-label="Select previous lane">← Lane</button><button data-action="right" aria-label="Select next lane">Lane →</button><button data-action="pulse">Pulse ↑</button><button data-action="color">Color ↓</button><button id="reset">Reset fixture</button><span id="state" role="status"></span></div>
+<p class="note">Focus the left view for arrow keys. Selection and color commit immediately; optional pulses never lock input. Pulse/color are presentation controls, not Xorex actions. Both views share one fixture. No scoring, collection, matching, firing rules, audio, or game timing.</p>
+<details open><summary>Platform evidence</summary><pre id="capabilities">Probing this browser…</pre></details>
+<p class="note">SDR sRGB output. Halos are translucent generated sprites, not bloom, display HDR, reflections, or ray tracing. <a href="README.md">Run instructions, engine investigation, and limitations</a>.</p>
+<p id="error" role="alert"></p>
+</main>
+<script type="module" src="lab.js"></script>
+</html>

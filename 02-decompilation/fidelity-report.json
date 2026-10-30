@@ -1,0 +1,15 @@
+{
+  "original_sha256": "53514361d3f332e24000a54fad39ec554f289e583b3cab061cb64633621bbbb7",
+  "candidate_sha256": "77e161747718a13bff5c52bcbedea6be47b90875aa33cce62511f746fdedc1cd",
+  "file_bytes_equal": false,
+  "uncompressed_swf_bytes_equal": true,
+  "original_uncompressed_sha256": "34181a3bd39e24adfb57c282822433a218b37138cc2da17fbb318fc897ed614e",
+  "candidate_uncompressed_sha256": "34181a3bd39e24adfb57c282822433a218b37138cc2da17fbb318fc897ed614e",
+  "tag_payloads_equal": true,
+  "abc_payloads_equal": true,
+  "original_bytes": 47594,
+  "candidate_bytes": 47660,
+  "source_recompilation_tested": false,
+  "test": "FFDec 26.4.0 SWF \u2192 XML \u2192 SWF serialization roundtrip",
+  "interpretation": "Bytecode and every uncompressed SWF byte match; compressed file does not. This does not reconstruct compilable Haxe source."
+}

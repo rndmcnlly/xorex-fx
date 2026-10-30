@@ -1,0 +1,115 @@
+package §as§.adamsmith.xorex
+{
+   import flash.display.Graphics;
+   import flash.display.MovieClip;
+   
+   public class Enemy
+   {
+      
+      method
+         name null
+         returns QName(PackageNamespace(""),"void")
+         
+         body
+            maxstack 0
+            localcount 1
+            initscopedepth 1
+            maxscopedepth 1
+            
+            code
+               returnvoid
+            end ; code
+         end ; body
+      end ; method
+      
+      public var lambda:Wavelength;
+      
+      public var clip:MovieClip;
+      
+      public function Enemy(param1:Wavelength = undefined)
+      {
+         method
+            name null
+            flag HAS_OPTIONAL
+            param QName(PackageNamespace("as.adamsmith.xorex"),"Wavelength")
+            optional Undefined()
+            returns QName(PackageNamespace(""),"void")
+            
+            body
+               maxstack 4
+               localcount 4
+               initscopedepth 1
+               maxscopedepth 2
+               
+               code
+                  getlocal0
+                  pushscope
+                  getlex QName(PackageNamespace(""),"Boot_e5d4ab")
+                  getproperty QName(PackageNamespace(""),"skip_constructor")
+                  iffalse ofs000d
+                  returnvoid
+         ofs000d:
+                  findproperty QName(PackageNamespace(""),"lambda")
+                  getlocal1
+                  initproperty QName(PackageNamespace(""),"lambda")
+                  findproperty QName(PackageNamespace(""),"clip")
+                  findpropstrict QName(PackageNamespace("flash.display"),"MovieClip")
+                  constructprop QName(PackageNamespace("flash.display"),"MovieClip"), 0
+                  initproperty QName(PackageNamespace(""),"clip")
+                  findproperty QName(PackageNamespace(""),"clip")
+                  getproperty QName(PackageNamespace(""),"clip")
+                  getproperty QName(PackageNamespace(""),"graphics")
+                  coerce QName(PackageNamespace("flash.display"),"Graphics")
+                  setlocal2
+                  getlex QName(PackageNamespace("as.adamsmith.xorex"),"Wavelengths")
+                  findproperty QName(PackageNamespace(""),"lambda")
+                  getproperty QName(PackageNamespace(""),"lambda")
+                  callproperty QName(PackageNamespace(""),"toInt"), 1
+                  convert_i
+                  convert_i
+                  setlocal3
+                  getlocal2
+                  pushbyte 2
+                  getlocal3
+                  pushdouble 0.125
+                  callpropvoid QName(PackageNamespace(""),"lineStyle"), 3
+                  getlocal2
+                  pushbyte 0
+                  pushbyte 0
+                  pushbyte 26
+                  callpropvoid QName(PackageNamespace(""),"drawCircle"), 3
+                  getlocal2
+                  pushbyte 1
+                  getlocal3
+                  pushbyte 0
+                  callpropvoid QName(PackageNamespace(""),"lineStyle"), 3
+                  getlocal2
+                  getlocal3
+                  pushdouble 0.25
+                  callpropvoid QName(PackageNamespace(""),"beginFill"), 2
+                  getlocal2
+                  pushbyte 0
+                  pushbyte 0
+                  pushbyte 16
+                  callpropvoid QName(PackageNamespace(""),"drawCircle"), 3
+                  getlocal2
+                  callpropvoid QName(PackageNamespace(""),"endFill"), 0
+                  getlocal2
+                  getlocal3
+                  pushdouble 1
+                  callpropvoid QName(PackageNamespace(""),"beginFill"), 2
+                  getlocal2
+                  pushbyte 0
+                  pushbyte 0
+                  pushbyte 10
+                  callpropvoid QName(PackageNamespace(""),"drawCircle"), 3
+                  getlocal2
+                  callpropvoid QName(PackageNamespace(""),"endFill"), 0
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+   }
+}
+

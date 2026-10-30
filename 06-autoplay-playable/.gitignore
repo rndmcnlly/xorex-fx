@@ -1,0 +1,2 @@
+# Experimental evidence is retained through Git LFS; caches remain ignored.
+__pycache__/

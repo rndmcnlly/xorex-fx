@@ -1,0 +1,7 @@
+title = "Xorex FX publication scan"
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Never-published local tools, installed dependencies, private workspace, and built site"
+paths = ['''(^|/)(\.git|\.cache|\.venv|node_modules|__pycache__|\.openchamber|private|dist)/''']

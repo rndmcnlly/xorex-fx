@@ -1,0 +1,107 @@
+package §as§.adamsmith.xorex
+{
+   public final class Wavelength
+   {
+      
+      public static const __isenum:Boolean = true;
+      
+      public static var __constructs__:*;
+      
+      public static var Yellow:Wavelength;
+      
+      public static var White:Wavelength;
+      
+      public static var Red:Wavelength;
+      
+      public static var Pink:Wavelength;
+      
+      public static var Green:Wavelength;
+      
+      public static var Blue:Wavelength;
+      
+      public static var Black:Wavelength;
+      
+      method
+         name null
+         returns QName(PackageNamespace(""),"void")
+         
+         body
+            maxstack 0
+            localcount 1
+            initscopedepth 1
+            maxscopedepth 1
+            
+            code
+               returnvoid
+            end ; code
+         end ; body
+      end ; method
+      
+      public var tag:String;
+      
+      public var index:int;
+      
+      public var params:Array;
+      
+      public const __enum__:Boolean = true;
+      
+      public function Wavelength(param1:String, param2:int, param3:Object)
+      {
+         method
+            name null
+            param QName(PackageNamespace(""),"String")
+            param QName(PackageNamespace(""),"int")
+            param QName(PackageNamespace(""),"Object")
+            returns QName(PackageNamespace(""),"void")
+            
+            body
+               maxstack 2
+               localcount 4
+               initscopedepth 1
+               maxscopedepth 2
+               
+               code
+                  getlocal0
+                  pushscope
+                  findproperty QName(PackageNamespace(""),"tag")
+                  getlocal1
+                  initproperty QName(PackageNamespace(""),"tag")
+                  findproperty QName(PackageNamespace(""),"index")
+                  getlocal2
+                  initproperty QName(PackageNamespace(""),"index")
+                  findproperty QName(PackageNamespace(""),"params")
+                  getlocal3
+                  initproperty QName(PackageNamespace(""),"params")
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      final public function toString() : String
+      {
+         trait method QName(PackageNamespace(""),"toString")
+            flag FINAL
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"String")
+               
+               body
+                  maxstack 2
+                  localcount 1
+                  initscopedepth 1
+                  maxscopedepth 1
+                  
+                  code
+                     getlex QName(PackageNamespace(""),"Boot_e5d4ab")
+                     getlocal0
+                     callproperty QName(PackageNamespace(""),"enum_to_string"), 1
+                     returnvalue
+                  end ; code
+               end ; body
+            end ; method
+         }
+      }
+   }
+   

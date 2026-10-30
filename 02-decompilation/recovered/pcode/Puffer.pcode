@@ -1,0 +1,152 @@
+package §as§.adamsmith.xorex
+{
+   import flash.display.MovieClip;
+   import flash.events.Event;
+   
+   public class Puffer extends MovieClip
+   {
+      
+      method
+         name null
+         returns QName(PackageNamespace(""),"void")
+         
+         body
+            maxstack 0
+            localcount 1
+            initscopedepth 1
+            maxscopedepth 1
+            
+            code
+               returnvoid
+            end ; code
+         end ; body
+      end ; method
+      
+      public var t:int;
+      
+      public function Puffer(param1:Wavelength = undefined)
+      {
+         method
+            name null
+            flag HAS_OPTIONAL
+            param QName(PackageNamespace("as.adamsmith.xorex"),"Wavelength")
+            optional Undefined()
+            returns QName(PackageNamespace(""),"void")
+            
+            body
+               maxstack 4
+               localcount 3
+               initscopedepth 1
+               maxscopedepth 2
+               
+               code
+                  getlocal0
+                  pushscope
+                  getlex QName(PackageNamespace(""),"Boot_e5d4ab")
+                  getproperty QName(PackageNamespace(""),"skip_constructor")
+                  iffalse ofs000d
+                  returnvoid
+         ofs000d:
+                  getlocal0
+                  constructsuper 0
+                  getlex QName(PackageNamespace("as.adamsmith.xorex"),"Wavelengths")
+                  getlocal1
+                  callproperty QName(PackageNamespace(""),"toInt"), 1
+                  convert_i
+                  convert_i
+                  setlocal2
+                  findproperty QName(PackageNamespace(""),"graphics")
+                  getproperty QName(PackageNamespace(""),"graphics")
+                  getlocal2
+                  pushdouble 0.012
+                  callpropvoid QName(PackageNamespace(""),"beginFill"), 2
+                  findproperty QName(PackageNamespace(""),"graphics")
+                  getproperty QName(PackageNamespace(""),"graphics")
+                  pushbyte 0
+                  pushbyte 0
+                  pushbyte 10
+                  callpropvoid QName(PackageNamespace(""),"drawCircle"), 3
+                  findproperty QName(PackageNamespace(""),"graphics")
+                  getproperty QName(PackageNamespace(""),"graphics")
+                  pushbyte 0
+                  pushbyte 0
+                  pushbyte 40
+                  callpropvoid QName(PackageNamespace(""),"drawCircle"), 3
+                  findproperty QName(PackageNamespace(""),"graphics")
+                  getproperty QName(PackageNamespace(""),"graphics")
+                  pushbyte 0
+                  pushbyte 0
+                  pushbyte 5
+                  callpropvoid QName(PackageNamespace(""),"drawCircle"), 3
+                  findproperty QName(PackageNamespace(""),"graphics")
+                  getproperty QName(PackageNamespace(""),"graphics")
+                  callpropvoid QName(PackageNamespace(""),"endFill"), 0
+                  findproperty QName(PackageNamespace(""),"addEventListener")
+                  getlex QName(PackageNamespace("flash.events"),"Event")
+                  getproperty QName(PackageNamespace(""),"ENTER_FRAME")
+                  findproperty QName(PackageNamespace(""),"tick")
+                  getproperty QName(PackageNamespace(""),"tick")
+                  callpropvoid QName(PackageNamespace(""),"addEventListener"), 2
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function tick() : void
+      {
+         trait method QName(PackageNamespace(""),"tick")
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 3
+                  localcount 1
+                  initscopedepth 1
+                  maxscopedepth 2
+                  
+                  code
+                     getlocal0
+                     pushscope
+                     findproperty QName(PackageNamespace(""),"t")
+                     getproperty QName(PackageNamespace(""),"t")
+                     pushbyte 100
+                     ifne ofs002a
+                     findproperty QName(PackageNamespace(""),"removeEventListener")
+                     getlex QName(PackageNamespace("flash.events"),"Event")
+                     getproperty QName(PackageNamespace(""),"ENTER_FRAME")
+                     findproperty QName(PackageNamespace(""),"tick")
+                     getproperty QName(PackageNamespace(""),"tick")
+                     callpropvoid QName(PackageNamespace(""),"removeEventListener"), 2
+                     findproperty QName(PackageNamespace(""),"parent")
+                     getproperty QName(PackageNamespace(""),"parent")
+                     getlocal0
+                     callpropvoid QName(PackageNamespace(""),"removeChild"), 1
+            ofs002a:
+                     findproperty QName(PackageNamespace(""),"t")
+                     findproperty QName(PackageNamespace(""),"t")
+                     getproperty QName(PackageNamespace(""),"t")
+                     increment_i
+                     initproperty QName(PackageNamespace(""),"t")
+                     findproperty QName(PackageNamespace(""),"scaleX")
+                     findproperty QName(PackageNamespace(""),"scaleX")
+                     getproperty QName(PackageNamespace(""),"scaleX")
+                     pushdouble 1.1
+                     multiply
+                     initproperty QName(PackageNamespace(""),"scaleX")
+                     findproperty QName(PackageNamespace(""),"scaleY")
+                     findproperty QName(PackageNamespace(""),"scaleY")
+                     getproperty QName(PackageNamespace(""),"scaleY")
+                     pushdouble 1.12
+                     multiply
+                     initproperty QName(PackageNamespace(""),"scaleY")
+                     returnvoid
+                  end ; code
+               end ; body
+            end ; method
+         }
+      }
+   }
+   

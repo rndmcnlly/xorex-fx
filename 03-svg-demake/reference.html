@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Silent original: visual comparison only</title>
+<link rel="icon" href="data:,">
+<style>
+body { margin: 0; background: #404040; }
+#game, ruffle-player { display: block; width: 800px; height: 600px; }
+</style>
+<div id="game"></div>
+<script src="https://unpkg.com/@ruffle-rs/ruffle@0.7.1/ruffle.js"></script>
+<script>
+// Separate inspection wrapper. Never patch the preserved movie or normal player.
+window.addEventListener('load', async () => {
+  const player = window.RufflePlayer.newest().createPlayer();
+  document.getElementById('game').appendChild(player);
+  const api = player.ruffle();
+  api.volume = 0;
+  window.reference = api;
+  await api.load({ url: '../01-ruffle/Xorex.swf', base: '../01-ruffle/', autoplay: 'on', backgroundColor: '#404040', unmuteOverlay: 'hidden' });
+  api.volume = 0;
+});
+</script>
+</html>

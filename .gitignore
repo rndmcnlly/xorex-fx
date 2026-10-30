@@ -1,0 +1,23 @@
+.DS_Store
+.openchamber/
+__pycache__/
+.venv/
+node_modules/
+.cache/
+dist/
+tools/bin/
+# Experimental evidence is retained through LFS, not ignored wholesale.
+private/
+*.log
+!**/generated/**/*.log
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.key
+.chrome-profile/
+bl-state/
+# Bulk platform-library decompiler output is reproducible, not an art artifact.
+# Reviewed game-specific exports and byte checks live outside this directory.
+02-decompilation/generated/

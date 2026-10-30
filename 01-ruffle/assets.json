@@ -1,0 +1,68 @@
+[
+  {
+    "path": "Xorex.swf",
+    "url": "https://adamsmith.as/games/xorex/Xorex.swf",
+    "bytes": 47594,
+    "sha256": "53514361d3f332e24000a54fad39ec554f289e583b3cab061cb64633621bbbb7"
+  },
+  {
+    "path": "art/structies.swf",
+    "url": "https://adamsmith.as/games/xorex/art/structies.swf",
+    "bytes": 16879,
+    "sha256": "05b1115a4850676b1b579e38e2effecc9f53b26d6d4e67abb192f2dd0ea99fc3"
+  },
+  {
+    "path": "art/termination.swf",
+    "url": "https://adamsmith.as/games/xorex/art/termination.swf",
+    "bytes": 5150,
+    "sha256": "842edefe146f50bc878895a1e70955838e54aa8d0a097e32b8c2b887fb023ea1"
+  },
+  {
+    "path": "sound/compact.mp3",
+    "url": "https://adamsmith.as/games/xorex/sound/compact.mp3",
+    "bytes": 24685,
+    "sha256": "11e26419c5875c050b355a30ae9bf042df715b651d8651c77a8b26e82b8dbfdb"
+  },
+  {
+    "path": "sound/fire.mp3",
+    "url": "https://adamsmith.as/games/xorex/sound/fire.mp3",
+    "bytes": 24685,
+    "sha256": "6e15f66f22e686522764a81b97df1784a368878bab78a5ea4fdd2115172b6c4c"
+  },
+  {
+    "path": "sound/fizzle.mp3",
+    "url": "https://adamsmith.as/games/xorex/sound/fizzle.mp3",
+    "bytes": 24685,
+    "sha256": "42a27deda1927bfbd88d6ccedc482d2384e9f10f7c795f6a4594589653ab064b"
+  },
+  {
+    "path": "sound/gather.mp3",
+    "url": "https://adamsmith.as/games/xorex/sound/gather.mp3",
+    "bytes": 24685,
+    "sha256": "0365ed5426dd36b04b26f018b5ccde917c6cd05bc46fb240b8505595e8c023a6"
+  },
+  {
+    "path": "sound/infest.mp3",
+    "url": "https://adamsmith.as/games/xorex/sound/infest.mp3",
+    "bytes": 24685,
+    "sha256": "898a887886c0bff794a9c99d691ee858a0f989ecbede55088545294ea2226f52"
+  },
+  {
+    "path": "sound/logo.mp3",
+    "url": "https://adamsmith.as/games/xorex/sound/logo.mp3",
+    "bytes": 24267,
+    "sha256": "2dc761b949b238c9f793ab52f03c8e95d773ff179e923e8c03ac456634035598"
+  },
+  {
+    "path": "sound/synthesize.mp3",
+    "url": "https://adamsmith.as/games/xorex/sound/synthesize.mp3",
+    "bytes": 24685,
+    "sha256": "e8f32504bb867ca2fc0b614a40485932f943e39d4503a5929f8102ce7891797c"
+  },
+  {
+    "path": "sound/thoracks-phase.mp3",
+    "url": "https://adamsmith.as/games/xorex/sound/thoracks-phase.mp3",
+    "bytes": 1536861,
+    "sha256": "34168e35e7b16741802acfe4e166d68e2418f5bc5f3e464837ce00c621ac46c3"
+  }
+]

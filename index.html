@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Xorex FX · Play the prototypes</title>
+<meta name="description" content="A browser-native revival of Xorex: original Flash preservation, precise modern gameplay, luminous motion studies, and explainable autoplay.">
+<style>
+:root{color-scheme:dark;font:16px/1.6 system-ui;background:#252726;color:#f0f0ec}
+*{box-sizing:border-box}body{max-width:880px;margin:54px auto;padding:0 22px}h1{font-size:3.4rem;line-height:1;letter-spacing:-.06em;margin:24px 0 16px}
+p{color:#c8c8c3}ol{padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}li{background:#343735;padding:20px;border-radius:5px}
+a{color:#fff;text-underline-offset:4px}li p{margin:7px 0 0}.number{color:#aaa;font-variant-numeric:tabular-nums;margin-right:12px}
+small{color:#bbb}.eyebrow{text-transform:uppercase;letter-spacing:.17em;font-size:.75rem;color:#cecfb8}footer{margin:28px 0}code{font-size:.9em}
+.feature{background:#404440;padding:26px;margin:28px 0;border-radius:6px}.feature h2{margin:0;font-size:1.5rem}.feature p{max-width:65ch}
+.play{display:inline-block;padding:10px 18px;background:#e4e7ce;color:#20251f;text-decoration:none;border-radius:4px;font-weight:700}
+.links{display:flex;flex-wrap:wrap;gap:12px 24px;margin:20px 0}.note{font-size:.9rem}a:focus-visible{outline:3px solid #e4e7ce;outline-offset:5px}
+@media(max-width:560px){body{margin:30px auto}ol{grid-template-columns:1fr}.feature{padding:20px}h1{font-size:2.8rem}}
+</style>
+<div class="eyebrow">Browser-native · Arrow-key survival · Work in progress</div>
+<h1>Xorex FX</h1>
+<p>Collect. Convert. Clear a path. A preservation-first revival of Adam M. Smith’s 2009 jewel-matching shooter, built around fluent arrow-key play.</p>
+<section class="feature">
+<h2>The current playable experiment</h2>
+<p>Precise original-derived rules, luminous spheres, action feedback that leaves a memory, and an experimental explainable autoplayer. Play yourself, or press <strong>Tab</strong> to toggle the bot. Any manual arrow takes control.</p>
+<a class="play" href="06-autoplay-playable/">Play Xorex FX</a>
+<p class="note">Keyboard recommended. Left/right selects a lane; Down collects or converts; Up replaces or fires. Silent by default. The bot is experimental, not a perfect player.</p>
+</section>
+<div class="links"><a href="docs/rules/xorex-rules.pdf">Printable one-page rules</a><a href="gallery.html">Visual explorations</a><a href="https://github.com/rndmcnlly/xorex-fx">Source and experiment history</a></div>
+<h2>Explore the prototypes</h2>
+<ol>
+<li><a href="04-rendering-lab/motion-playable/">Motion and memory</a><p>The manual-only juice study: instant actions, interruptible movement, satisfying reloads, and persistent causal feedback.</p></li>
+<li><a href="04-rendering-lab/p3-playable/">Wide-gamut color</a><p>A simpler playable Display P3 / sRGB comparison. P3 expands color, not physical white brightness; output remains SDR.</p></li>
+<li><a href="03-svg-demake/">Faithful SVG demake</a><p>The accepted original-derived rules and nearly pixel-matched presentation, with optional recovered sound.</p></li>
+<li><a href="01-ruffle/">Original Xorex, in Ruffle</a><p>The unchanged 2009 game and recovered assets. Allow the obsolete ad request to time out. Ruffle loads from a pinned CDN.</p></li>
+<li><a href="05-autoplay-lab/">Planning and curriculum lab</a><p>Frozen boards, white-stacking lessons, verified witness plans, and HTN/MCTS comparisons. No advancing gems in this lab.</p></li>
+<li><a href="04-rendering-lab/">Early 3D material study</a><p>A rendering-only fixture, not the game. Generated geometry and capability probes; Three.js loads from a pinned CDN.</p></li>
+</ol>
+<footer><p class="note">Arrow-key fluency first. No input waits for an animation. No account required. New playable studies use local browser code; optional original audio is hosted here. The preservation and early 3D studies use external CDNs.</p><div class="links"><a href="02-decompilation/MECHANICS.md">Recovered mechanics</a><a href="README.md">Project notes</a><a href="RIGHTS.md">Rights and provenance</a></div><small>Experiments by Adam M. Smith. Browser support, color reproduction, and autoplay quality vary. No HDR or real-time ray-tracing claim.</small></footer>
+</html>

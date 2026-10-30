@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Xorex (2009) · Ruffle</title>
+<style>
+body { margin: 0; background: #111; color: #ddd; font: 14px system-ui; text-align: center; }
+#game { width: min(100vw, 960px); aspect-ratio: 4/3; margin: 12px auto; }
+ruffle-player { width: 100%; height: 100%; }
+p { margin: 10px; }
+</style>
+<div id="game"></div>
+<p>Original Xorex (2009), running in Ruffle. Click the game to focus.</p>
+<p>Arrow keys: left/right move; down collects/converts; up replaces/fires.</p>
+<details><summary>Emulator diagnostics</summary><pre id="diagnostics" style="text-align:left;white-space:pre-wrap;overflow-wrap:anywhere"></pre></details>
+<script>
+for (const method of ['log', 'warn', 'error']) {
+  const original = console[method].bind(console);
+  console[method] = (...args) => {
+    original(...args);
+    document.getElementById('diagnostics').textContent += args.join(' ') + '\n';
+  };
+}
+</script>
+<script src="https://unpkg.com/@ruffle-rs/ruffle@0.7.1/ruffle.js"></script>
+<script>
+window.addEventListener('load', async () => {
+  const player = window.RufflePlayer.newest().createPlayer();
+  document.getElementById('game').appendChild(player);
+  await player.ruffle().load({url: 'Xorex.swf', autoplay: 'on', backgroundColor: '#404040'});
+});
+</script>
+</html>

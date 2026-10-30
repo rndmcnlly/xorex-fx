@@ -1,0 +1,624 @@
+package §as§.adamsmith.xorex
+{
+   import flash.display.Graphics;
+   import flash.display.MovieClip;
+   import flash.filters.GlowFilter;
+   
+   public class ShipModel extends MovieClip
+   {
+      
+      method
+         name null
+         returns QName(PackageNamespace(""),"void")
+         
+         body
+            maxstack 0
+            localcount 1
+            initscopedepth 1
+            maxscopedepth 1
+            
+            code
+               returnvoid
+            end ; code
+         end ; body
+      end ; method
+      
+      public var pos:int;
+      
+      public var inventory:Energy;
+      
+      public var glyph:MovieClip;
+      
+      public var combat:CombatModel;
+      
+      public var capacitor:Energy;
+      
+      public function ShipModel(param1:CombatModel = undefined)
+      {
+         method
+            name null
+            flag HAS_OPTIONAL
+            param QName(PackageNamespace("as.adamsmith.xorex"),"CombatModel")
+            optional Undefined()
+            returns QName(PackageNamespace(""),"void")
+            
+            body
+               maxstack 3
+               localcount 4
+               initscopedepth 1
+               maxscopedepth 2
+               
+               code
+                  getlocal0
+                  pushscope
+                  getlex QName(PackageNamespace(""),"Boot_e5d4ab")
+                  getproperty QName(PackageNamespace(""),"skip_constructor")
+                  iffalse ofs000d
+                  returnvoid
+         ofs000d:
+                  getlocal0
+                  constructsuper 0
+                  findproperty QName(PackageNamespace(""),"combat")
+                  getlocal1
+                  initproperty QName(PackageNamespace(""),"combat")
+                  findproperty QName(PackageNamespace(""),"pos")
+                  getlex QName(PackageNamespace("as.adamsmith.xorex"),"Main")
+                  callproperty QName(PackageNamespace(""),"chooseOne"), 0
+                  convert_i
+                  initproperty QName(PackageNamespace(""),"pos")
+                  findproperty QName(PackageNamespace(""),"inventory")
+                  findpropstrict QName(PackageNamespace("as.adamsmith.xorex"),"Energy")
+                  constructprop QName(PackageNamespace("as.adamsmith.xorex"),"Energy"), 0
+                  initproperty QName(PackageNamespace(""),"inventory")
+                  findproperty QName(PackageNamespace(""),"capacitor")
+                  findpropstrict QName(PackageNamespace("as.adamsmith.xorex"),"Energy")
+                  constructprop QName(PackageNamespace("as.adamsmith.xorex"),"Energy"), 0
+                  initproperty QName(PackageNamespace(""),"capacitor")
+                  findproperty QName(PackageNamespace(""),"glyph")
+                  findpropstrict QName(PackageNamespace("flash.display"),"MovieClip")
+                  constructprop QName(PackageNamespace("flash.display"),"MovieClip"), 0
+                  initproperty QName(PackageNamespace(""),"glyph")
+                  findproperty QName(PackageNamespace(""),"y")
+                  pushint 540
+                  initproperty QName(PackageNamespace(""),"y")
+                  findproperty QName(PackageNamespace(""),"addChild")
+                  findproperty QName(PackageNamespace(""),"glyph")
+                  getproperty QName(PackageNamespace(""),"glyph")
+                  callpropvoid QName(PackageNamespace(""),"addChild"), 1
+                  findpropstrict QName(PackageNamespace("flash.filters"),"GlowFilter")
+                  constructprop QName(PackageNamespace("flash.filters"),"GlowFilter"), 0
+                  coerce QName(PackageNamespace("flash.filters"),"GlowFilter")
+                  setlocal2
+                  getlocal2
+                  pushint 16777215
+                  initproperty QName(PackageNamespace(""),"color")
+                  getlocal2
+                  pushdouble 0.25
+                  initproperty QName(PackageNamespace(""),"alpha")
+                  getlocal2
+                  pushbyte 25
+                  initproperty QName(PackageNamespace(""),"blurX")
+                  getlocal2
+                  pushbyte 5
+                  initproperty QName(PackageNamespace(""),"blurY")
+                  findpropstrict QName(PackageNamespace("flash.filters"),"GlowFilter")
+                  constructprop QName(PackageNamespace("flash.filters"),"GlowFilter"), 0
+                  coerce QName(PackageNamespace("flash.filters"),"GlowFilter")
+                  setlocal3
+                  getlocal3
+                  pushint 16777215
+                  initproperty QName(PackageNamespace(""),"color")
+                  getlocal3
+                  pushdouble 0.25
+                  initproperty QName(PackageNamespace(""),"alpha")
+                  getlocal3
+                  pushbyte 5
+                  initproperty QName(PackageNamespace(""),"blurX")
+                  getlocal3
+                  pushbyte 50
+                  initproperty QName(PackageNamespace(""),"blurY")
+                  findproperty QName(PackageNamespace(""),"filters")
+                  getlocal2
+                  getlocal3
+                  newarray 2
+                  initproperty QName(PackageNamespace(""),"filters")
+                  findproperty QName(PackageNamespace(""),"redraw")
+                  callpropvoid QName(PackageNamespace(""),"redraw"), 0
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function right() : void
+      {
+         trait method QName(PackageNamespace(""),"right")
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 3
+                  localcount 1
+                  initscopedepth 1
+                  maxscopedepth 2
+                  
+                  code
+                     getlocal0
+                     pushscope
+                     findproperty QName(PackageNamespace(""),"pos")
+                     getproperty QName(PackageNamespace(""),"pos")
+                     getlex QName(PackageNamespace("as.adamsmith.xorex"),"Main")
+                     getproperty QName(PackageNamespace(""),"n")
+                     pushbyte 1
+                     subtract_i
+                     ifnlt ofs002f
+                     findproperty QName(PackageNamespace(""),"pos")
+                     findproperty QName(PackageNamespace(""),"pos")
+                     getproperty QName(PackageNamespace(""),"pos")
+                     pushbyte 1
+                     add_i
+                     initproperty QName(PackageNamespace(""),"pos")
+                     findproperty QName(PackageNamespace(""),"redraw")
+                     callpropvoid QName(PackageNamespace(""),"redraw"), 0
+                     jump ofs0038
+            ofs002f:
+                     getlex QName(PackageNamespace("as.adamsmith.xorex"),"Main")
+                     pushstring "fizzle"
+                     callpropvoid QName(PackageNamespace(""),"triggerEvent"), 1
+            ofs0038:
+                     returnvoid
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function redraw() : void
+         {
+            trait method QName(PackageNamespace(""),"redraw")
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 4
+                     localcount 7
+                     initscopedepth 1
+                     maxscopedepth 2
+                     
+                     code
+                        getlocal0
+                        pushscope
+                        pushbyte 0
+                        setlocal 4
+                        pushbyte 0
+                        setlocal 5
+                        pushbyte 0
+                        setlocal 6
+                        findproperty QName(PackageNamespace(""),"glyph")
+                        getproperty QName(PackageNamespace(""),"glyph")
+                        findproperty QName(PackageNamespace(""),"pos")
+                        getproperty QName(PackageNamespace(""),"pos")
+                        pushbyte 40
+                        multiply_i
+                        pushbyte 20
+                        add_i
+                        initproperty QName(PackageNamespace(""),"x")
+                        findproperty QName(PackageNamespace(""),"glyph")
+                        getproperty QName(PackageNamespace(""),"glyph")
+                        getproperty QName(PackageNamespace(""),"graphics")
+                        coerce QName(PackageNamespace("flash.display"),"Graphics")
+                        setlocal1
+                        getlocal1
+                        callpropvoid QName(PackageNamespace(""),"clear"), 0
+                        getlocal1
+                        pushbyte 30
+                        pushint 16777215
+                        pushdouble 0.05
+                        callpropvoid QName(PackageNamespace(""),"lineStyle"), 3
+                        getlocal1
+                        pushbyte 0
+                        pushbyte 0
+                        callpropvoid QName(PackageNamespace(""),"moveTo"), 2
+                        getlocal1
+                        pushbyte 0
+                        pushint -1500
+                        callpropvoid QName(PackageNamespace(""),"lineTo"), 2
+                        getlocal1
+                        pushbyte 8
+                        pushint 16777215
+                        callpropvoid QName(PackageNamespace(""),"lineStyle"), 2
+                        getlocal1
+                        pushbyte 0
+                        pushbyte 0
+                        callpropvoid QName(PackageNamespace(""),"moveTo"), 2
+                        getlocal1
+                        pushbyte -20
+                        pushbyte 20
+                        callpropvoid QName(PackageNamespace(""),"lineTo"), 2
+                        getlocal1
+                        pushbyte 0
+                        pushbyte 0
+                        callpropvoid QName(PackageNamespace(""),"moveTo"), 2
+                        getlocal1
+                        pushbyte 20
+                        pushbyte 20
+                        callpropvoid QName(PackageNamespace(""),"lineTo"), 2
+                        pushbyte 0
+                        convert_i
+                        setlocal2
+                        findproperty QName(PackageNamespace(""),"inventory")
+                        getproperty QName(PackageNamespace(""),"inventory")
+                        getproperty QName(PackageNamespace(""),"n")
+                        convert_i
+                        setlocal3
+                        jump ofs00cc
+               ofs0092:
+                        label
+                        getlocal2
+                        inclocal_i 2
+                        convert_i
+                        setlocal 4
+                        getlocal 4
+                        pushbyte 2
+                        add_i
+                        pushbyte 6
+                        multiply_i
+                        convert_i
+                        setlocal 5
+                        getlex QName(PackageNamespace("as.adamsmith.xorex"),"Wavelengths")
+                        findproperty QName(PackageNamespace(""),"inventory")
+                        getproperty QName(PackageNamespace(""),"inventory")
+                        getproperty QName(PackageNamespace(""),"lambda")
+                        callproperty QName(PackageNamespace(""),"toInt"), 1
+                        convert_i
+                        convert_i
+                        setlocal 6
+                        getlocal1
+                        pushbyte 2
+                        getlocal 6
+                        callpropvoid QName(PackageNamespace(""),"lineStyle"), 2
+                        getlocal1
+                        pushbyte 0
+                        pushbyte -40
+                        getlocal 5
+                        callpropvoid QName(PackageNamespace(""),"drawCircle"), 3
+               ofs00cc:
+                        getlocal2
+                        getlocal3
+                        iflt ofs0092
+                        pushbyte 0
+                        convert_i
+                        setlocal2
+                        findproperty QName(PackageNamespace(""),"capacitor")
+                        getproperty QName(PackageNamespace(""),"capacitor")
+                        getproperty QName(PackageNamespace(""),"n")
+                        convert_i
+                        setlocal3
+                        jump ofs0144
+               ofs00e5:
+                        label
+                        getlocal2
+                        inclocal_i 2
+                        convert_i
+                        setlocal 4
+                        getlocal 4
+                        pushbyte 2
+                        add_i
+                        pushbyte 6
+                        multiply_i
+                        convert_i
+                        setlocal 5
+                        getlex QName(PackageNamespace("as.adamsmith.xorex"),"Wavelengths")
+                        findproperty QName(PackageNamespace(""),"capacitor")
+                        getproperty QName(PackageNamespace(""),"capacitor")
+                        getproperty QName(PackageNamespace(""),"lambda")
+                        callproperty QName(PackageNamespace(""),"toInt"), 1
+                        convert_i
+                        convert_i
+                        setlocal 6
+                        getlocal1
+                        pushbyte 2
+                        getlocal 6
+                        callpropvoid QName(PackageNamespace(""),"lineStyle"), 2
+                        getlocal1
+                        pushbyte 0
+                        pushbyte 0
+                        getlocal 5
+                        add_i
+                        callpropvoid QName(PackageNamespace(""),"moveTo"), 2
+                        getlocal1
+                        pushbyte -20
+                        pushbyte 20
+                        getlocal 5
+                        add_i
+                        callpropvoid QName(PackageNamespace(""),"lineTo"), 2
+                        getlocal1
+                        pushbyte 0
+                        pushbyte 0
+                        getlocal 5
+                        add_i
+                        callpropvoid QName(PackageNamespace(""),"moveTo"), 2
+                        getlocal1
+                        pushbyte 20
+                        pushbyte 20
+                        getlocal 5
+                        add_i
+                        callpropvoid QName(PackageNamespace(""),"lineTo"), 2
+               ofs0144:
+                        getlocal2
+                        getlocal3
+                        iflt ofs00e5
+                        returnvoid
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function left() : void
+            {
+               trait method QName(PackageNamespace(""),"left")
+                  dispid 0
+                  method
+                     name null
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 3
+                        localcount 1
+                        initscopedepth 1
+                        maxscopedepth 2
+                        
+                        code
+                           getlocal0
+                           pushscope
+                           findproperty QName(PackageNamespace(""),"pos")
+                           getproperty QName(PackageNamespace(""),"pos")
+                           pushbyte 0
+                           ifngt ofs0028
+                           findproperty QName(PackageNamespace(""),"pos")
+                           findproperty QName(PackageNamespace(""),"pos")
+                           getproperty QName(PackageNamespace(""),"pos")
+                           pushbyte 1
+                           subtract_i
+                           initproperty QName(PackageNamespace(""),"pos")
+                           findproperty QName(PackageNamespace(""),"redraw")
+                           callpropvoid QName(PackageNamespace(""),"redraw"), 0
+                           jump ofs0031
+                  ofs0028:
+                           getlex QName(PackageNamespace("as.adamsmith.xorex"),"Main")
+                           pushstring "fizzle"
+                           callpropvoid QName(PackageNamespace(""),"triggerEvent"), 1
+                  ofs0031:
+                           returnvoid
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function gather() : void
+               {
+                  trait method QName(PackageNamespace(""),"gather")
+                     dispid 0
+                     method
+                        name null
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 5
+                           localcount 2
+                           initscopedepth 1
+                           maxscopedepth 2
+                           
+                           code
+                              getlocal0
+                              pushscope
+                              pushnull
+                              astype QName(PackageNamespace("as.adamsmith.xorex"),"Energy")
+                              setlocal1
+                              findproperty QName(PackageNamespace(""),"inventory")
+                              getproperty QName(PackageNamespace(""),"inventory")
+                              getproperty QName(PackageNamespace(""),"lambda")
+                              pushnull
+                              coerce QName(PackageNamespace("as.adamsmith.xorex"),"Wavelength")
+                              ifne ofs0056
+                              findproperty QName(PackageNamespace(""),"combat")
+                              getproperty QName(PackageNamespace(""),"combat")
+                              findproperty QName(PackageNamespace(""),"pos")
+                              getproperty QName(PackageNamespace(""),"pos")
+                              callproperty QName(PackageNamespace(""),"gather"), 1
+                              coerce QName(PackageNamespace("as.adamsmith.xorex"),"Energy")
+                              coerce QName(PackageNamespace("as.adamsmith.xorex"),"Energy")
+                              setlocal1
+                              getlocal1
+                              getproperty QName(PackageNamespace(""),"lambda")
+                              pushnull
+                              coerce QName(PackageNamespace("as.adamsmith.xorex"),"Wavelength")
+                              ifeq ofs0052
+                              findproperty QName(PackageNamespace(""),"inventory")
+                              getlocal1
+                              initproperty QName(PackageNamespace(""),"inventory")
+                              findproperty QName(PackageNamespace(""),"redraw")
+                              callpropvoid QName(PackageNamespace(""),"redraw"), 0
+                              getlex QName(PackageNamespace("as.adamsmith.xorex"),"Main")
+                              pushstring "gather"
+                              callpropvoid QName(PackageNamespace(""),"triggerEvent"), 1
+                     ofs0052:
+                              jump ofs015b
+                     ofs0056:
+                              pushtrue
+                              findproperty QName(PackageNamespace(""),"capacitor")
+                              getproperty QName(PackageNamespace(""),"capacitor")
+                              getproperty QName(PackageNamespace(""),"lambda")
+                              pushnull
+                              coerce QName(PackageNamespace("as.adamsmith.xorex"),"Wavelength")
+                              ifeq ofs007d
+                              pop
+                              findproperty QName(PackageNamespace(""),"capacitor")
+                              getproperty QName(PackageNamespace(""),"capacitor")
+                              getproperty QName(PackageNamespace(""),"lambda")
+                              findproperty QName(PackageNamespace(""),"inventory")
+                              getproperty QName(PackageNamespace(""),"inventory")
+                              getproperty QName(PackageNamespace(""),"lambda")
+                              equals
+                              convert_b
+                     ofs007d:
+                              iffalse ofs00c8
+                              findproperty QName(PackageNamespace(""),"capacitor")
+                              getproperty QName(PackageNamespace(""),"capacitor")
+                              findproperty QName(PackageNamespace(""),"inventory")
+                              getproperty QName(PackageNamespace(""),"inventory")
+                              getproperty QName(PackageNamespace(""),"lambda")
+                              initproperty QName(PackageNamespace(""),"lambda")
+                              findproperty QName(PackageNamespace(""),"capacitor")
+                              getproperty QName(PackageNamespace(""),"capacitor")
+                              dup
+                              getproperty QName(PackageNamespace(""),"n")
+                              findproperty QName(PackageNamespace(""),"inventory")
+                              getproperty QName(PackageNamespace(""),"inventory")
+                              getproperty QName(PackageNamespace(""),"n")
+                              add_i
+                              initproperty QName(PackageNamespace(""),"n")
+                              findproperty QName(PackageNamespace(""),"inventory")
+                              getproperty QName(PackageNamespace(""),"inventory")
+                              callpropvoid QName(PackageNamespace(""),"reset"), 0
+                              findproperty QName(PackageNamespace(""),"redraw")
+                              callpropvoid QName(PackageNamespace(""),"redraw"), 0
+                              getlex QName(PackageNamespace("as.adamsmith.xorex"),"Main")
+                              pushstring "compact"
+                              callpropvoid QName(PackageNamespace(""),"triggerEvent"), 1
+                              jump ofs015b
+                     ofs00c8:
+                              findproperty QName(PackageNamespace(""),"inventory")
+                              getproperty QName(PackageNamespace(""),"inventory")
+                              getproperty QName(PackageNamespace(""),"lambda")
+                              getlex QName(PackageNamespace("as.adamsmith.xorex"),"Wavelength")
+                              getproperty QName(PackageNamespace(""),"White")
+                              ifne ofs0137
+                              getlex QName(PackageNamespace("as.adamsmith.xorex"),"Main")
+                              getproperty QName(PackageNamespace(""),"kongregateApi")
+                              iffalse ofs00fe
+                              getlex QName(PackageNamespace("as.adamsmith.xorex"),"Main")
+                              getproperty QName(PackageNamespace(""),"kongregate")
+                              getproperty QName(PackageNamespace(""),"stats")
+                              pushstring "WhiteOrbsChained"
+                              findproperty QName(PackageNamespace(""),"inventory")
+                              getproperty QName(PackageNamespace(""),"inventory")
+                              getproperty QName(PackageNamespace(""),"n")
+                              callpropvoid QName(PackageNamespace(""),"submit"), 2
+                     ofs00fe:
+                              findproperty QName(PackageNamespace(""),"capacitor")
+                              getproperty QName(PackageNamespace(""),"capacitor")
+                              dup
+                              getproperty QName(PackageNamespace(""),"n")
+                              pushbyte 5
+                              findproperty QName(PackageNamespace(""),"inventory")
+                              getproperty QName(PackageNamespace(""),"inventory")
+                              getproperty QName(PackageNamespace(""),"n")
+                              findproperty QName(PackageNamespace(""),"inventory")
+                              getproperty QName(PackageNamespace(""),"inventory")
+                              getproperty QName(PackageNamespace(""),"n")
+                              multiply_i
+                              multiply_i
+                              add_i
+                              initproperty QName(PackageNamespace(""),"n")
+                              findproperty QName(PackageNamespace(""),"inventory")
+                              getproperty QName(PackageNamespace(""),"inventory")
+                              callpropvoid QName(PackageNamespace(""),"reset"), 0
+                              findproperty QName(PackageNamespace(""),"redraw")
+                              callpropvoid QName(PackageNamespace(""),"redraw"), 0
+                              jump ofs015b
+                     ofs0137:
+                              findproperty QName(PackageNamespace(""),"inventory")
+                              getproperty QName(PackageNamespace(""),"inventory")
+                              callpropvoid QName(PackageNamespace(""),"reset"), 0
+                              findproperty QName(PackageNamespace(""),"capacitor")
+                              getproperty QName(PackageNamespace(""),"capacitor")
+                              callpropvoid QName(PackageNamespace(""),"reset"), 0
+                              findproperty QName(PackageNamespace(""),"redraw")
+                              callpropvoid QName(PackageNamespace(""),"redraw"), 0
+                              getlex QName(PackageNamespace("as.adamsmith.xorex"),"Main")
+                              pushstring "fizzle"
+                              callpropvoid QName(PackageNamespace(""),"triggerEvent"), 1
+                     ofs015b:
+                              returnvoid
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function fire() : void
+                  {
+                     trait method QName(PackageNamespace(""),"fire")
+                        dispid 0
+                        method
+                           name null
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 3
+                              localcount 1
+                              initscopedepth 1
+                              maxscopedepth 2
+                              
+                              code
+                                 getlocal0
+                                 pushscope
+                                 findproperty QName(PackageNamespace(""),"inventory")
+                                 getproperty QName(PackageNamespace(""),"inventory")
+                                 getproperty QName(PackageNamespace(""),"lambda")
+                                 pushnull
+                                 coerce QName(PackageNamespace("as.adamsmith.xorex"),"Wavelength")
+                                 ifne ofs005c
+                                 findproperty QName(PackageNamespace(""),"capacitor")
+                                 getproperty QName(PackageNamespace(""),"capacitor")
+                                 getproperty QName(PackageNamespace(""),"lambda")
+                                 pushnull
+                                 coerce QName(PackageNamespace("as.adamsmith.xorex"),"Wavelength")
+                                 ifne ofs0028
+                                 jump ofs0058
+                        ofs0028:
+                                 findproperty QName(PackageNamespace(""),"combat")
+                                 getproperty QName(PackageNamespace(""),"combat")
+                                 findproperty QName(PackageNamespace(""),"pos")
+                                 getproperty QName(PackageNamespace(""),"pos")
+                                 findproperty QName(PackageNamespace(""),"capacitor")
+                                 getproperty QName(PackageNamespace(""),"capacitor")
+                                 callpropvoid QName(PackageNamespace(""),"fire"), 2
+                                 findproperty QName(PackageNamespace(""),"capacitor")
+                                 getproperty QName(PackageNamespace(""),"capacitor")
+                                 callpropvoid QName(PackageNamespace(""),"decrement"), 0
+                                 findproperty QName(PackageNamespace(""),"redraw")
+                                 callpropvoid QName(PackageNamespace(""),"redraw"), 0
+                                 getlex QName(PackageNamespace("as.adamsmith.xorex"),"Main")
+                                 pushstring "fire"
+                                 callpropvoid QName(PackageNamespace(""),"triggerEvent"), 1
+                        ofs0058:
+                                 jump ofs008c
+                        ofs005c:
+                                 findproperty QName(PackageNamespace(""),"combat")
+                                 getproperty QName(PackageNamespace(""),"combat")
+                                 findproperty QName(PackageNamespace(""),"pos")
+                                 getproperty QName(PackageNamespace(""),"pos")
+                                 findproperty QName(PackageNamespace(""),"inventory")
+                                 getproperty QName(PackageNamespace(""),"inventory")
+                                 callpropvoid QName(PackageNamespace(""),"synthesize"), 2
+                                 findproperty QName(PackageNamespace(""),"inventory")
+                                 getproperty QName(PackageNamespace(""),"inventory")
+                                 callpropvoid QName(PackageNamespace(""),"reset"), 0
+                                 findproperty QName(PackageNamespace(""),"redraw")
+                                 callpropvoid QName(PackageNamespace(""),"redraw"), 0
+                                 getlex QName(PackageNamespace("as.adamsmith.xorex"),"Main")
+                                 pushstring "synth"
+                                 callpropvoid QName(PackageNamespace(""),"triggerEvent"), 1
+                        ofs008c:
+                                 returnvoid
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                  }
+               }
+               

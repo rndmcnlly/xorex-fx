@@ -1,0 +1,2 @@
+# Visual smoke-test evidence is retained with Git LFS.
+__pycache__/

@@ -1,0 +1,194 @@
+package §as§.adamsmith.xorex
+{
+   public class Wavelengths
+   {
+      
+      public static var options:Array;
+      
+      method
+         name null
+         returns QName(PackageNamespace(""),"void")
+         
+         body
+            maxstack 0
+            localcount 1
+            initscopedepth 1
+            maxscopedepth 1
+            
+            code
+               returnvoid
+            end ; code
+         end ; body
+      end ; method
+      
+      public function Wavelengths()
+      {
+         method
+            name null
+            returns QName(PackageNamespace(""),"void")
+            
+            body
+               maxstack 1
+               localcount 1
+               initscopedepth 1
+               maxscopedepth 2
+               
+               code
+                  getlocal0
+                  pushscope
+                  getlex QName(PackageNamespace(""),"Boot_e5d4ab")
+                  getproperty QName(PackageNamespace(""),"skip_constructor")
+                  iffalse ofs000d
+                  returnvoid
+         ofs000d:
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public static function toInt(param1:Wavelength) : int
+      {
+         trait method QName(PackageNamespace(""),"toInt")
+            flag FINAL
+            dispid 1
+            method
+               name null
+               param QName(PackageNamespace("as.adamsmith.xorex"),"Wavelength")
+               returns QName(PackageNamespace(""),"int")
+               
+               body
+                  maxstack 2
+                  localcount 3
+                  initscopedepth 1
+                  maxscopedepth 1
+                  
+                  code
+                     getlocal1
+                     getproperty QName(PackageNamespace(""),"index")
+                     convert_i
+                     lookupswitch ofs001f, [ofs0026, ofs002c, ofs0032, ofs0038, ofs003e, ofs0044, ofs004a]
+            ofs001f:
+                     pushnull
+                     coerce_a
+                     convert_i
+                     jump ofs004c
+            ofs0026:
+                     pushint 16711680
+                     jump ofs004c
+            ofs002c:
+                     pushint 65280
+                     jump ofs004c
+            ofs0032:
+                     pushint 255
+                     jump ofs004c
+            ofs0038:
+                     pushint 16776960
+                     jump ofs004c
+            ofs003e:
+                     pushint 16711935
+                     jump ofs004c
+            ofs0044:
+                     pushint 16777215
+                     jump ofs004c
+            ofs004a:
+                     pushbyte 0
+            ofs004c:
+                     returnvalue
+                     returnvoid
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public static function choose() : Wavelength
+         {
+            trait method QName(PackageNamespace(""),"choose")
+               flag FINAL
+               dispid 2
+               method
+                  name null
+                  returns QName(PackageNamespace("as.adamsmith.xorex"),"Wavelength")
+                  
+                  body
+                     maxstack 4
+                     localcount 7
+                     initscopedepth 1
+                     maxscopedepth 1
+                     
+                     code
+                        pushnull
+                        astype QName(PackageNamespace(""),"Array")
+                        setlocal 6
+                        getlex QName(PackageNamespace(""),"Lambda")
+                        getlex QName(PackageNamespace(""),"Lambda")
+                        getlex QName(PackageNamespace("as.adamsmith.xorex"),"Wavelengths")
+                        getproperty QName(PackageNamespace(""),"options")
+                        newfunction 307
+                        callproperty QName(PackageNamespace(""),"map"), 2
+                        coerce QName(PackageNamespace(""),"List")
+                        newfunction 308
+                        pushbyte 0
+                        callproperty QName(PackageNamespace(""),"fold"), 3
+                        convert_i
+                        convert_i
+                        setlocal1
+                        getlex QName(PackageNamespace(""),"Math")
+                        callproperty QName(PackageNamespace(""),"random"), 0
+                        convert_d
+                        getlocal1
+                        multiply
+                        convert_d
+                        setlocal2
+                        pushbyte 0
+                        convert_i
+                        setlocal3
+                        pushbyte 0
+                        convert_i
+                        setlocal 4
+                        getlex QName(PackageNamespace("as.adamsmith.xorex"),"Wavelengths")
+                        getproperty QName(PackageNamespace(""),"options")
+                        coerce QName(PackageNamespace(""),"Array")
+                        setlocal 5
+                        jump ofs0079
+               ofs004a:
+                        label
+                        getlocal 5
+                        getlocal 4
+                        getproperty MultinameL([PackageNamespace("","1")])
+                        coerce QName(PackageNamespace(""),"Array")
+                        coerce QName(PackageNamespace(""),"Array")
+                        setlocal 6
+                        inclocal_i 4
+                        getlocal3
+                        getlocal 6
+                        pushbyte 1
+                        getproperty MultinameL([PackageNamespace("","1")])
+                        convert_i
+                        add_i
+                        convert_i
+                        setlocal3
+                        getlocal3
+                        getlocal2
+                        ifngt ofs0079
+                        getlocal 6
+                        pushbyte 0
+                        getproperty MultinameL([PackageNamespace("","1")])
+                        coerce QName(PackageNamespace("as.adamsmith.xorex"),"Wavelength")
+                        returnvalue
+               ofs0079:
+                        getlocal 4
+                        getlocal 5
+                        getproperty QName(PackageNamespace(""),"length")
+                        convert_i
+                        iflt ofs004a
+                        getlex QName(PackageNamespace("as.adamsmith.xorex"),"Wavelength")
+                        getproperty QName(PackageNamespace(""),"Black")
+                        returnvalue
+                     end ; code
+                  end ; body
+               end ; method
+            }
+         }
+      }
+      

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Xorex · SVG reference demake</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+<main>
+  <header><h1>Xorex <span>SVG reference demake</span></h1><a href="../01-ruffle/">Original reference</a></header>
+  <div id="stage" tabindex="0" aria-label="Xorex game. Arrow keys to play.">
+    <svg id="board" viewBox="0 0 800 600" role="img" aria-label="Twenty-lane game board"></svg>
+    <section id="overlay" class="splash">
+      <img id="original-art" src="assets/structies/1.svg" alt="Xorex. Down: collect or convert. Up: replace or fire. Left/right: movement.">
+      <div class="accessible-instructions">
+      <h2 id="heading">Xorex</h2>
+      <p id="message">Arrow-key fluency, not a race against animation.</p>
+      <dl><dt>Left / right</dt><dd>Select a lane. No wrapping.</dd>
+        <dt>Down</dt><dd>Gather the bottom same-color run, or convert held gems into charge. Black cannot be gathered.</dd>
+        <dt>Up</dt><dd>Return held gems to the lane, or spend one charge to shoot one bottom gem, any color.</dd></dl>
+      <p>Matching colors add charge. A mismatched white run adds 5 × its size². Other mismatches destroy both stores.</p>
+      <p>New gems arrive at the top. A lane longer than 14 ends play on the next simulation frame.</p>
+      <button id="start">Start playing</button><small>Or press Up / Down. The starting key does not also act.</small>
+      </div>
+    </section>
+  </div>
+  <div class="status"><output id="status" aria-live="off">Ready</output><label><input id="sound" type="checkbox" aria-label="Sound effects"> Effects</label><label><input id="music" type="checkbox" aria-label="Original music"> Original music</label></div>
+  <p class="note">Tap keys: holding a key does not repeat. Actions commit immediately; arrivals run at 30 Hz. Hidden tabs suspend simulation without catching up.</p>
+  <details><summary>Developer extras and fidelity notes</summary>
+    <p>These controls are not original game mechanics. Pause and frame-step are inspection aids; the game also suspends while this tab is hidden.</p>
+    <button id="pause" disabled>Pause (developer)</button> <button id="step" disabled>Step one frame</button>
+    <p id="seed-note"></p><pre id="debug"></pre>
+    <p>Source-reviewed mechanics; measured visual comparison, not a live mechanics trace oracle. SVG reproduces original stage art, chained ship glows, and entrance motion, with rasterization/timing differences remaining. No ads, leaderboard, or score submission. <a href="README.md">Evidence and limitations</a>.</p>
+  </details>
+</main>
+<script type="module" src="app.mjs"></script>
+</html>
